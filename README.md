@@ -135,7 +135,7 @@ Purpose-built for modern edge and cloud architectures. The platform publishes pr
 - **Full SparkplugB v2.2 lifecycle**: Birth certificates, data messages, death certificates, and command write-back (DCMD/NCMD)
 - **Five publish modes**: SparkplugB (Protobuf), structured JSON, flattened topics, plain scalar values, or ISA-95 Unified Namespace (UNS)
 - **Dual-channel architecture**: Real-time data delivery (QoS 0) alongside guaranteed historian delivery (QoS 1/2) on independent channels
-- **NDATA mode**: Red Lion Crimson-style edge gateway pattern — all devices as node metrics in a single publish
+- **DDATA and NDATA modes**: Per-device publishing (DDATA, default) with individual DBIRTH/DDATA/DDEATH per device, or node-level publishing (NDATA) in the Red Lion Crimson-style edge gateway pattern with all devices as node metrics in a single message
 - **SparkplugB metric aliasing**: Birth messages carry name + alias; data messages use numeric alias only, reducing payload size by 40-60%
 - **Report-by-exception (RBE)**: Deadband-based filtering publishes only changed values, reducing bandwidth by 80-95% during steady-state operation
 - **Broker failover**: Automatic failover between primary and backup brokers with SparkplugB birth storm on reconnect and `bdSeq` session tracking
@@ -222,7 +222,7 @@ Real industrial processes don't oscillate continuously. Most of the time, values
 - Periodically, values transition smoothly to new setpoints (cosine-interpolated ramp)
 - Transition timing is randomized and independent per tag, creating natural-looking process variation
 
-Combined with MQTT report-by-exception filtering, SparkplugB metric aliasing, and NDATA node-level publishing, the full optimization stack reduces MQTT bandwidth by 80-95% compared to unconditional polling. This is exactly how production edge gateways optimize bandwidth over constrained cellular or satellite links.
+Combined with MQTT report-by-exception filtering, SparkplugB metric aliasing, and NDATA node-level publishing (as an alternative to the default per-device DDATA mode), the full optimization stack reduces MQTT bandwidth by 80-95% compared to unconditional polling. This is exactly how production edge gateways optimize bandwidth over constrained cellular or satellite links.
 
 ---
 
