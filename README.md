@@ -2,7 +2,7 @@
 
 ### Multi-Industry Industrial Control System Simulation Platform
 
-**Version 1.7.0 | April 2026**
+**Version 1.7.3-rc1 | April 2026**
 
 ---
 
@@ -332,7 +332,7 @@ The following capabilities are planned for future releases:
 - **DNP3 Protocol** — DNP3 outstation support for power and water subsystems (code complete, pending compatibility testing)
 - **BACnet/IP Protocol** — BACnet device support for building automation subsystems with standard object types
 - **Docker Containerization** — Multi-architecture Docker images with compose files for single-instance, multi-instance, and cybersecurity lab deployments
-- **Additional Protocols** — Emerson ROC/ROC Plus (oil & gas), AB EtherNet/IP CIP (all industry verticals)
+- **Additional Protocols** — Emerson ROC/ROC Plus (oil & gas), EtherNet/IP CIP (manufacturing)
 
 ---
 
