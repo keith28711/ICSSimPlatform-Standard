@@ -2,7 +2,7 @@
 
 ### Multi-Industry Industrial Control System Simulation Platform
 
-**Version 1.7.4-rc1 | April 2026**
+**Version 1.7.5-rc1 | April 2026**
 
 ---
 
